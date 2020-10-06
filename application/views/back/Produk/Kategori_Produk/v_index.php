@@ -12,7 +12,7 @@
       <h6 class="m-0 font-weight-bold text-primary">Tambah Data</h6>
     </a>
     <!-- Card Content - Collapse -->
-    <div class="collapse" id="collapseCardExample" style="">
+    <div class="collapse" id="collapseCardExample">
       <div class="card-body">
         <div class="text-center">
           <h1 class="h4 text-gray-900 mb-4">Tambahkan Kategori Baru :</h1>
@@ -20,12 +20,12 @@
         <form class="kategori" action="<?php echo base_url().'back/Kategori_produk/simpan'; ?>">
           <div class="form-group row">
             <div class="col-sm-12 mb-3 mb-sm-0">
-              <input type="text" class="form-control" name="txt-nama" placeholder="Nama Kategori Baru..." required>
+              <input type="text" class="form-control" name="txt-nama" placeholder="Nama Kategori Baru..." autocomplete="off" required>
             </div>
           </div>
           <div class="form-group row">
             <div class="col-sm-12 mb-3 mb-sm-0">
-              <select name = "txt-status" class="form-control" required="--Pilih Status--">
+              <select name = "txt-status" class="form-control" required="--Pilih Status--" >
                 <option selected="">--Pilih Status--</option>
                 <option value = "1">Aktif</option>
                 <option value = "0">Non-Aktif</option>
