@@ -47,11 +47,11 @@
         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
           <thead>
             <tr>
-              <th>No</th>
+              <th width="5%">No</th>
               <th>Nama Kategori</th>
               <th>Status</th>
-              <th class="text-center">Edit</th>
-              <th class="text-center">Hapus</th>
+              <th class="text-center" width="5%">Edit</th>
+              <th class="text-center" width="5%">Hapus</th>
             </tr>
           </thead>
           <tfoot>

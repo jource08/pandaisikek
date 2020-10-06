@@ -4,3 +4,6 @@
 
   <!-- Custom styles for this template-->
   <link href="<?php echo base_url(); ?>/assets/back/css/sb-admin-2.min.css" rel="stylesheet">
+
+  <!-- Page Level styles -->
+  <link href="<?php echo base_url(); ?>/assets/back/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css">

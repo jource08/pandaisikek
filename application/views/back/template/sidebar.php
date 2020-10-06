@@ -2,7 +2,7 @@
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
   <!-- Sidebar - Brand -->
-  <a class="sidebar-brand d-flex align-items-center justify-content-center" href="backend">
+  <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?= base_url('backend/') ?>">
     <div class="sidebar-brand-icon rotate-n-15">
       <i class="fas fa-laugh-wink"></i>
     </div>
@@ -36,7 +36,7 @@
     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
       <div class="bg-white py-2 collapse-inner rounded">
         <h6 class="collapse-header">Kelola Produk:</h6>
-        <a class="collapse-item" href="backend/kategori">Kategori Produk</a>
+        <a class="collapse-item" href="<?= base_url('backend/kategori') ?>">Kategori Produk</a>
         <a class="collapse-item" href="cards.html">Daftar Produk</a>
       </div>
     </div>
