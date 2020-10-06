@@ -68,7 +68,7 @@
             <tr>
               <td><?php echo $i+1 ?></td>
               <td><?php echo $dt_kategori[$i]['nama'] ?></td>
-              <td>Aktif/Non-Aktif</td>
+              <td><?php echo ($dt_kategori[$i]['status'] == 1)? 'Aktif' : 'Non-Aktif'; ?></td>
               <td class="text-center"><a href="#" class="btn btn-warning"><i class="fas fa-edit"></i></a></td>
               <td class="text-center"><a href="<?php echo base_url().'back/Kategori_produk/hapus?id='.$dt_kategori[$i]['id_kategori']; ?>" class="btn btn-danger"><i class="fas fa-trash"></i></a></td>
             </tr>
