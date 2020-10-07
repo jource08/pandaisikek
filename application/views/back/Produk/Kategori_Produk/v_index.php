@@ -88,8 +88,21 @@
                       <span aria-hidden="true">&times;</span>
                     </button>
                   </div>
-                  <div class="modal-body">
-                    ...
+                  <div class="modal-body">                    
+                    <div class="form-group row">
+                      <div class="col-sm-12 mb-3 mb-sm-0">
+                        <input type="text" class="form-control" name="txt-nama" placeholder="Nama Kategori Baru..." autocomplete="off" required>
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <div class="col-sm-12 mb-3 mb-sm-0">
+                        <select name = "txt-status" class="form-control" required="--Pilih Status--" >
+                          <option selected="">--Pilih Status--</option>
+                          <option value = "1">Aktif</option>
+                          <option value = "0">Non-Aktif</option>
+                        </select>
+                      </div>
+                    </div>
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -106,3 +119,5 @@
 
 </div>
 <!-- /.container-fluid -->
+  <!-- Page level custom scripts -->
+  <script src="<?php echo base_url(); ?>assets/back/js/demo/datatables-demo.js" defer></script>
