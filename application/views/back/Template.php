@@ -9,7 +9,8 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>SB Admin 2 - Dashboard</title>
+  <title>Backend Area - Tenun Pandai Sikek</title>
+  <link rel="icon" href="<?=base_url()?>assets/front/img/logo.png" type="image/gif">
 
   <?php echo $_style; ?>
 

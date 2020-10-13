@@ -36,12 +36,29 @@ class Backend_Login extends CI_Controller {
 			redirect(base_url("/backend"));
  			//$this->template->load('back/template/role','back/home'); 
 		}else{
-			echo "Username dan password salah !";
+			$this->set_alert(1,'danger');
+			redirect(base_url('backend_login'));
 		}
 	}
  
 	function logout(){
 		$this->session->sess_destroy();
 		redirect('backend_login');
+	}
+
+	function set_alert($error,$type){
+		if ($error == 0){
+			$message = '';
+		}else{
+			$message = 'Username / password salah!';
+		}
+		$alert =
+		'<div class="alert alert-'.$type.' alert-dismissible fade show" role="alert">
+		'.$message.'
+			<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+			</button>
+		</div>';
+		$this->session->set_flashdata('message', $alert);
 	}
 }

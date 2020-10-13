@@ -36,6 +36,7 @@
                 <div class="text-center">
                   <h1 class="h4 text-gray-900 mb-4">Login Backend Admin <br> PandaiSikek.com</h1>
                 </div>
+                <?=  $this->session->flashdata('message'); ?>
                 <form class="user">
                   <div class="form-group">
                     <input type="text" class="form-control form-control-user" name="username" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Username...">

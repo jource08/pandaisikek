@@ -20,16 +20,39 @@ class Kategori_produk extends CI_Controller {
 	function simpan()
 	{
 		$nama = $this->input->get('txt-nama');
-		$result = $this->M_Kategori_produk->addKategori($nama);
-		#redirect(base_url().'backend/kategori');
-		var_dump($result);
+		$status = $this->input->get('txt-status');
+		$result = $this->M_Kategori_produk->addKategori($nama,$status);
+		$this->set_alert($result['error'],'simpan');
+		redirect(base_url().'backend/kategori');
   	}
 
 	function hapus()
 	{
-		$id = $this->input->get('id');
+		$id = base64_decode($this->input->get('id'));
 		$result = $this->M_Kategori_produk->delKategori($id);
-		#redirect(base_url().'backend/kategori');
-		var_dump($result);
-  	}
+		$this->set_alert($result['error'],'hapus');
+		redirect(base_url().'backend/kategori');
+	}
+
+	function ajax(){
+		$id = base64_decode($this->input->post('id'));
+        $data = $this->M_Kategori_produk->getKategori($id);
+		echo json_encode($data);
+	}
+	
+	function set_alert($error,$type){
+		if ($error == 0){
+			$message = 'Berhasil '.$type.' data kategori produk!';
+		}else{
+			$message = 'Gagal '.$type.' data kategori produk!';
+		}
+		$alert =
+		'<div class="alert alert-'.$error.' alert-dismissible fade show" role="alert">
+		'.$message.'
+			<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+			</button>
+		</div>';
+		$this->session->set_flashdata('message', $alert);
+	}
 }
